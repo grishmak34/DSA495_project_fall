@@ -16,10 +16,7 @@
 
 ## Team Members
 
-- [Full name]
-- [Full name, if applicable]
-- [Full name, if applicable]
-- [Full name, if applicable]
+- Grishma Kuikel 
 
 ## One-Sentence Task
 
