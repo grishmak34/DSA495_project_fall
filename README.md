@@ -20,58 +20,66 @@
 
 ## One-Sentence Task
 
-**Given [the text or other input], we will [analyze, classify, retrieve, compare, or generate] [the intended output].**
-
-[Replace the sentence above with one specific task. Describe what the project will do, not only the general topic that interests you.]
+Given written patient reviews of medications, we will classify the reviews based on patient satisfaction and analyze common themes related to treatment benefits and side effects.
 
 ## Illustrative Input and Desired Output
 
-- **Example input:** [Provide one representative, non-sensitive input to the proposed system. A short, hypothetical, or sanitized example is acceptable.]
-- **Desired output:** [Show or describe what the system should return, predict, rank, extract, compare, or generate for that input.]
+- **Example input:** "This medication helped my symptoms, but it made me feel tired and dizzy."
+
+- **Desired output:** The system classifies the review as mixed sentiment and identifies common themes such as treatment effectiveness and side effects.
 
 ## Background and Starting Point
 
-[Briefly explain why your team is interested in this topic and how the idea began. What examples, experiences, questions, applications, or existing resources gave you the starting point? Provide enough context for the instructor to understand the idea, but do not write a literature review or extended theoretical justification.]
-
+I became interested in this topic because I often experience random symptoms and sometimes worry that they could be signs of a bigger health problem. This made me curious about how other people experience and describe their symptoms, especially when taking medications. I wanted to explore whether text analysis could help identify common patterns in patient reviews, such as side effects, treatment effectiveness, and overall satisfaction. Using the Drug Reviews dataset from the UCI Machine Learning Repository, I hope to better understand how people describe their experiences with different medications.
 ## Intended Output and Success
 
-[Describe what you want the project to produce or accomplish. For example, the output might be predicted labels, groups of related documents, discovered topics, extracted information, ranked search results, generated answers, a comparison of texts, or another useful result. If someone would use the output, identify that user and what the output would help them do.]
+The goal of this project is to analyze patient medication reviews and classify them as positive, negative, or mixed based on their experiences. We also want to identify common themes, such as side effects and how well medications work. The results could help patients better understand other people's experiences with medications and recognize common concerns. My project will be successful if it can accurately classify reviews and identify useful patterns in patient feedback.
 
-**Success statement:** [In one sentence, describe what would make the output useful or successful. A formal evaluation metric is not required at this stage.]
+**Success statement:** The project will be successful if it can accurately classify patient reviews and identify common side effects and experiences that help people better understand medications.
 
 ## Preferred Data
 
 ### Corpus
 
-[Describe the collection of text you expect to analyze. What does one item in the corpus represent—for example, one article, review, post, transcript, response, or policy document? What text and other useful fields or labels are available? Approximately how large is the corpus?]
+We will use the Drug Reviews (Druglib.com) dataset from the UCI Machine Learning Repository. The dataset contains approximately 4,143 patient medication reviews. Each row represents one patient's experience with a medication. The dataset includes written reviews about medication benefits, side effects, and overall experiences, along with ratings and other information. We will use the text reviews to classify patient experiences as positive, negative, or mixed and identify common patterns in side effects and treatment effectiveness.
 
 ### Source and Access
 
-- **Dataset or corpus name:** [Name]
-- **Original source organization or creator:** [Source]
-- **Original collection process:** [Who originally collected the data, when, and how, if known? Distinguish the original source from a site that only redistributes the data.]
-- **Direct link:** [URL]
-- **Access method:** [Download, API, web collection, request, or another method]
-- **Access, licensing, privacy, or redistribution considerations:** [Explain any restrictions or write “None identified.”]
-- **Backup corpus (optional):** [Identify an alternative source if losing access to the preferred corpus is a meaningful risk, or write “Not needed at this stage.”]
+- **Dataset or corpus name:** Drug Reviews (Druglib.com)
+- **Original source organization or creator:** DrugLib.com, with the dataset made available through the UCI Machine Learning Repository.
+- **Original collection process:** DrugLib.com collected patient reviews submitted by users about their experiences with medications. The reviews include information about benefits, side effects, and overall satisfaction. The exact collection dates are not clearly specified.
+- **Direct link:** https://archive.ics.uci.edu/dataset/461/drug
+- **Access method:** Download the dataset directly from the UCI Machine Learning Repository.
+- **Access, licensing, privacy, or redistribution considerations:** The dataset contains user-submitted health experiences. We will use it for educational purposes, avoid sharing personal information, and check the dataset's usage restrictions before uploading any raw data to GitHub.
+- **Backup corpus (optional):** Not needed at this stage.
 
 ### Examples
 
-[Show or describe two or three representative examples. You may quote short, non-sensitive excerpts, describe typical documents, or link to examples. Do not copy private, restricted, or personally identifiable information into the repository.]
+1. **Positive review:** A patient describes how a medication helped improve their symptoms and made them feel better.
+
+2. **Negative review:** A patient explains that a medication caused side effects such as headaches, dizziness, or nausea.
+
+3. **Mixed review:** A patient says the medication worked well for their condition but also caused uncomfortable side effects.
+
+These are hypothetical examples of the types of reviews we expect to analyze from the dataset.
 
 ### Fit with the Task
 
-[Explain briefly why this corpus contains the text, labels, metadata, or other information needed for the one-sentence task. Note any important information that may be missing or difficult to obtain.]
+This dataset fits our project because it contains written patient reviews about medications, including their benefits, side effects, and overall experiences. These reviews provide the text needed to identify common themes and classify patient experiences as positive, negative, or mixed. The dataset also includes ratings that could help us evaluate our classifications. However, it does not provide exact sentiment labels, so we may need to create our own labels or use sentiment analysis tools.
 
 ## Feasibility and Immediate Next Steps
 
-- **Minimum viable project:** [Describe the smallest complete version of the project your team could deliver successfully.]
-- **Data-access check:** [State whether a team member has successfully opened, downloaded, or queried the proposed data. If not, identify the next access step.]
-- **Largest current risk:** [Identify the most important uncertainty involving data, labels, computing, scope, evaluation, or another dependency.]
-- **Backup plan:** [Explain how the team could narrow or adjust the project if that risk occurs.]
+- **Minimum viable project:** I will analyze a sample of patient medication reviews and use Python to classify them as positive, negative, or mixed. I will also identify common themes related to side effects and treatment effectiveness.
+
+- **Data-access check:** I found the Drug Reviews dataset on the UCI Machine Learning Repository but have not downloaded it yet. My next step is to download and explore the data.
+
+- **Largest current risk:** The biggest challenge may be accurately classifying reviews because some patients describe both positive and negative experiences in the same review.
+
+- **Backup plan:** If classifying reviews into three categories becomes too difficult, I will simplify the project by focusing on positive and negative reviews or identifying common themes.
+
 - **Next two actions:**
-  1. [Action — responsible team member(s) — approximate target date]
-  2. [Action — responsible team member(s) — approximate target date]
+  1. Download the dataset and explore its variables using Python — Team members — October 28, 2026.
+  2. Clean the text data and begin testing sentiment classification methods — Team members — November 2, 2026.
 
 ## Possible Text-Analysis Method and Evaluation (Optional)
 
@@ -79,9 +87,10 @@
 
 ## Questions for the Instructor
 
-- [What feedback would help your team move forward? You might ask about scope, data feasibility, methods, evaluation, tools, or project risks.]
-- [Add another question, or write “No additional questions at this time.”]
+- Would sentiment analysis be a good method for classifying patient medication reviews as positive, negative, or mixed?
+
+-Would analyzing common side effects and treatment effectiveness be a manageable scope for this project, or should we focus on just one?
 
 ## AI-Use Statement
 
-[Identify any generative or agentic AI tool used to prepare this brief, its purpose, the work completed before consulting it, the advice incorporated, and how the output was verified. If your team did not use such a tool, state that clearly.]
+I used ChatGPT at the beginning of the project to remind myself how to copy the README template into my own GitHub repository because I had forgotten the steps. Before using AI, I had already reviewed the project instructions. For lengthy written answers I used Ai for checking grammar, giving it a prompt like,"don't change the wording but fix my grammar". 
